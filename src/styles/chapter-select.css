@@ -1,0 +1,40 @@
+.chapter-select {
+  padding: 45px;
+  background: url('../assets/img/waldo-bg.png') no-repeat right top;
+  background-attachment: fixed;
+  background-color: #ff9756;
+  padding-bottom: 100px;
+}
+
+.chapter-select h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.chapters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px 40px;
+}
+
+.chapter-div {
+  cursor: pointer;
+  display: block;
+}
+
+.chapter-div:hover {
+  width: 102%;
+  height: 102%;
+}
+
+.chapter-name {
+  display: grid;
+  place-items: center;
+  padding: 5px 0;
+  background-color: #FB1818;
+  color: white;
+  font-size: 1.125rem;
+}
+
+

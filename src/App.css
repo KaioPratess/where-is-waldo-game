@@ -1,0 +1,57 @@
+@import './styles/chapter-select.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Irish Grover';
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: 'Irish Grover';
+  src: url('./assets/font/irish-grover.regular.ttf');
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #FB1818;
+  padding: 0 40px;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+.header span {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 39px 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: -1;
+  padding: 15px;
+  background-color: #FB1818;
+  color: white;
+}
