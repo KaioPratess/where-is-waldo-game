@@ -1,4 +1,5 @@
 @import './styles/chapter-select.css';
+@import './styles/game.css';
 
 * {
   padding: 0;
@@ -19,8 +20,27 @@ img {
   src: url('./assets/font/irish-grover.regular.ttf');
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .app {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -32,18 +52,21 @@ img {
   color: white;
   background-color: #FB1818;
   padding: 0 40px;
+  position: fixed;
+  width: 100%;
 }
 
 .header h1 {
   font-size: 3.5rem;
   font-weight: bold;
   user-select: none;
+  cursor: pointer;
 }
 
-.header span {
+.header > span {
   font-size: 2rem;
   cursor: pointer;
-  padding: 39px 5px;
+  padding: 20px 5px;
 }
 
 .footer {
@@ -54,4 +77,38 @@ img {
   padding: 15px;
   background-color: #FB1818;
   color: white;
+}
+
+.char-div {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  align-items: center;
+  gap: 25px;
+}
+
+.characters {
+  width: 200px;
+  height: 90px;
+}
+
+.characters img {
+  object-fit: contain;
+}
+
+.characters div {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  top: -16px;
+
+}
+
+.characters span {
+  font-size: 0.75rem;
+}
+
+.counter {
+  font-size: 2rem;
+  position: relative;
+  top: 5px;
 }

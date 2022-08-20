@@ -1,9 +1,8 @@
 .chapter-select {
-  padding: 45px;
+  padding: 120px 45px;
   background: url('../assets/img/waldo-bg.png') no-repeat right top;
   background-attachment: fixed;
   background-color: #ff9756;
-  padding-bottom: 100px;
 }
 
 .chapter-select h2 {

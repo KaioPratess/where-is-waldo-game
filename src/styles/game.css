@@ -1,0 +1,9 @@
+.game-div {
+  padding: 120px 45px;
+  background-color: #ff9756;
+}
+
+.game-div h1 {
+  color: white;
+  margin-bottom: 20px;
+}
