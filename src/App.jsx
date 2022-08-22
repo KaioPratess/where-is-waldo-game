@@ -51,7 +51,7 @@ function App() {
                                           <div className="characters">
                                             <img src={char} alt="characters" />
                                             <div>
-                                              <span>Wildo</span>
+                                              <span>Waldo</span>
                                               <span>Woof</span>
                                               <span>Wilma</span>
                                               <span>Wizard</span>

@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 import Magnify from './magnify'
+import Modal from './Modal'
 
 function Game({currentChapter}) {
   const [ img, setImg ] = useState()
   const [ mousePosition, setMousePosition ] = useState({x:0,y:0})
-  const [ displayMagnify, setDisplayMagnify] = useState(false)
+  const [ displayMagnify, setDisplayMagnify ] = useState(false)
+  const [ activateModal, setActivateModal ] = useState(false)
 
   const handleClick = (e) => {
+    setActivateModal(prevState => !prevState)
     console.log(mousePosition.x, mousePosition.y)
   }
 
@@ -28,20 +31,21 @@ function Game({currentChapter}) {
     y = y - window.pageYOffset;
     setMousePosition({x, y})
     setDisplayMagnify(true)
+    setActivateModal(false)
   }
 
   useEffect(() => {
     setImg(document.querySelector('.img'))
     setDisplayMagnify(true)
   }, [])
-  
 
   return (
     <div className="game-div">
       <h1>{currentChapter.name}</h1>
       <div className="img-div">
         <img src={currentChapter.img} alt="Chapter Image" className='img' onClick={handleClick} onMouseMove={getMousePosition} onMouseLeave={handleMouseLeave}/>
-        {displayMagnify && <Magnify img={img} zoom={2} mousePosition={mousePosition}/>}
+        {displayMagnify && <Magnify img={img} zoom={2.5} mousePosition={mousePosition}/>}
+        {activateModal && <Modal mousePosition={mousePosition}/>}
       </div>
     </div>
   )

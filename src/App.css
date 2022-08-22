@@ -1,5 +1,6 @@
 @import './styles/chapter-select.css';
 @import './styles/game.css';
+@import './styles/modal.css';
 
 * {
   padding: 0;
@@ -43,6 +44,7 @@ img {
 .app {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .header {
@@ -98,10 +100,13 @@ img {
 
 .characters div {
   display: flex;
-  gap: 10px;
+  gap: 7px;
   position: relative;
   top: -16px;
+}
 
+.characters div span:last-child {
+  margin-left: 7px;
 }
 
 .characters span {
