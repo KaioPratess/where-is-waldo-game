@@ -3,6 +3,8 @@ import ChapterSelect from './components/ChapterSelect'
 import Game from './components/Game'
 import Scoreboard from './components/Scoreboard'
 import char from './assets/img/char.png'
+import logo from './assets/img/logo.png'
+
 import './App.css'
 
 function App() {
@@ -44,7 +46,7 @@ function App() {
   return (
     <div className="app">
       <header className='header'>
-        <h1 onClick={() => setCurrentComponent('chapterSelect')}>Where's Waldo?</h1>
+        <img src={logo} alt="logo" className='logo' onClick={() => setCurrentComponent('chapterSelect')}/>
         {currentComponent === 'chapterSelect' && <span>Scoreboard</span>}
         {currentComponent === 'game' && <div className='char-div'>
                                           <div className="characters">

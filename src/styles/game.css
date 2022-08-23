@@ -3,6 +3,14 @@
   background-color: #ff9756;
 }
 
+@media (max-width: 600px) {
+  .game-div {
+    height: 100vh;
+    padding: 120px 5px 0px 5px;
+    background-color: #ff9756;
+  }
+}
+
 .game-div h1 {
   color: white;
   margin-bottom: 20px;

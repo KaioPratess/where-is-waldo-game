@@ -9,7 +9,13 @@ function Game({currentChapter}) {
   const [ activateModal, setActivateModal ] = useState(false)
 
   const handleClick = (e) => {
+    let a, x = 0, y = 0;
     setActivateModal(prevState => !prevState)
+    a = e.target.getBoundingClientRect();
+
+    console.log(a)
+
+    console.log(mousePosition.x, a.width)
   }
 
   const handleMouseLeave = () => {

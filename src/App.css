@@ -41,25 +41,36 @@ img {
   background: #ED213A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer"
+  ;
 }
 
 .header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   background-color: #FB1818;
-  padding: 0 40px;
+  padding: 5px 40px;
   position: fixed;
   width: 100%;
   z-index: 2;
+  gap: 20px;
+}
+
+.header .logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .header h1 {
@@ -76,10 +87,10 @@ img {
 }
 
 .footer {
+  grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: -1;
   padding: 15px;
   background-color: #FB1818;
   color: white;
@@ -99,13 +110,14 @@ img {
 
 .characters img {
   object-fit: contain;
+  height: 80px;
 }
 
 .characters div {
   display: flex;
   gap: 7px;
   position: relative;
-  top: -16px;
+  top: -10px;
 }
 
 .characters div span:last-child {
