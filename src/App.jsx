@@ -32,7 +32,6 @@ function App() {
       })
   }
 
-
   const selectChapter = (name, img) => {
     setCurrentComponent('game')
     setCurrentChapter({name, img})

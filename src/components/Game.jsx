@@ -10,7 +10,6 @@ function Game({currentChapter}) {
 
   const handleClick = (e) => {
     setActivateModal(prevState => !prevState)
-    console.log(mousePosition.x, mousePosition.y)
   }
 
   const handleMouseLeave = () => {

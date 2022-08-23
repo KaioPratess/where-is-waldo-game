@@ -1,7 +1,7 @@
 export default function Modal({mousePosition}) {
   const modalStyle = {
-    top: (mousePosition.y - 20) + 'px',
-    left: (mousePosition.x + 20) + 'px',
+    top: (window.innerHeight - mousePosition.y) < 80 ? (mousePosition.y - 210) : (mousePosition.y - 10) + 'px',
+    left: (window.innerWidth - mousePosition.x) < 255 ? (mousePosition.x - 220) : (mousePosition.x + 20) + 'px'
   }
 
   const markerStyle = {
