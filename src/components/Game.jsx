@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Magnify from './magnify'
+import Magnify from './Magnify'
 import Modal from './Modal'
 
 function Game({currentChapter}) {
