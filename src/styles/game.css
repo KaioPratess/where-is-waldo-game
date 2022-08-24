@@ -1,6 +1,9 @@
 .game-div {
-  padding: 120px 45px;
+  padding: 140px 45px 100px 45px;
   background-color: #ff9756;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 @media (max-width: 600px) {
@@ -26,4 +29,79 @@
   border-radius: 50%;
   border: 1px solid red;
   background-color: red;
+}
+
+.dialog {
+  max-width: 230px;
+  max-height: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: fixed;
+  z-index: 3;
+  top: 120px;
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.congrats-bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats {
+  width: 550px;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  align-self: center;
+  background-color: #DED248;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px #DED248;
+}
+
+.congrats div label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.congrats div {
+  width: 100%;
+}
+
+.congrats div input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.125rem;
+  outline: none;
+  border: none;
+}
+
+.btn {
+  padding: 5px;
+  width: 100%;
+  font-size: 1.125rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #30668D;
+  color: white;
 }
