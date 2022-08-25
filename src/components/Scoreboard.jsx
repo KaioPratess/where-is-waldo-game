@@ -9,12 +9,14 @@ import { useEffect, useState } from 'react'
 
 function Scoreboard({currentChapter, getDb}) {
   const [docs, setDocs] = useState([])
-  const chapter = Object.keys(currentChapter).length ? currentChapter.name : 'ski-slopes'
+  const [chapter, setChapter] = useState(Object.keys(currentChapter).length ? currentChapter.name : 'ski-slopes')
 
   useEffect(() => {
     const documents = getDb(`chapters/${chapter.toLowerCase().replace(' ', '-')}/scoreboard`)
-
+    
+    setDocs([])
     documents.then(resp => {
+      console.log(resp)
       resp.docs.forEach(doc => {
         const name = doc._document.data.value.mapValue.fields.name.stringValue;
         const time = doc._document.data.value.mapValue.fields.time.mapValue.fields
@@ -28,11 +30,29 @@ function Scoreboard({currentChapter, getDb}) {
         })
       })
     })
-  }, [])
+
+  }, [chapter])
+
+  const changeChapter = (e) => {
+    const name = e.target.parentElement.childNodes[1].textContent
+    setChapter(name.toLowerCase().replace(/ /g, '-').replace(/,/g, ''))
+  }
+
+  const CapitalizeChapter = () => {
+    const arr = chapter.replace(',', '').split('-')
+    const newWord = [];
+    arr.forEach(word => {
+       newWord.push(word.slice(0, 1).toUpperCase() + word.slice(1))
+    })
+
+    return (
+      <h2> {newWord.join(' ')} </h2>
+    )
+  }
 
   const chapters = {
     'Ski Slopes': ski,
-    'Toys, Toys, Toys': toys,
+    'Toys Toys Toys': toys,
     'Horseplay in Troy': troy,
     'Amusement Park': park,
     'The Future': future,
@@ -44,9 +64,7 @@ function Scoreboard({currentChapter, getDb}) {
     const cards = keyArray.map(key => {
       const id = nanoid()
       return (
-        <div className='chapter-div' key={id} id={id} onClick={(e) => {
-          const name = e.target.parentElement.childNodes[1].textContent
-        }}>
+        <div className='chapter-div' key={id} id={id} onClick={changeChapter}>
           <img src={chapters[key]} alt="chapter" />
           <p className='chapter-name'>{key}</p>
         </div>
@@ -56,8 +74,7 @@ function Scoreboard({currentChapter, getDb}) {
     return cards
   }
 
-  const TableRows = () => {
-    console.log(docs)
+  let TableRows = () => {
     const rows = docs.map((doc) => {
       const id = nanoid()
       return (
@@ -77,7 +94,7 @@ function Scoreboard({currentChapter, getDb}) {
       <div className='scoreboard-chapters'>
         <Cards />
       </div>
-      <h2>{chapter.slice(0, 1).toUpperCase() + chapter.slice(1).replace('-', ' ')}</h2>
+      <CapitalizeChapter  />
       <table className='table'>
         <thead>
           <tr>

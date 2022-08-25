@@ -10,7 +10,7 @@ function ChapterSelect({selectChapter}) {
 
   const chapters = {
     'Ski Slopes': ski,
-    'Toys, Toys, Toys': toys,
+    'Toys Toys Toys': toys,
     'Horseplay in Troy': troy,
     'Amusement Park': park,
     'The Future': future,

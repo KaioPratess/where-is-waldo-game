@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Magnify from './Magnify'
 import Modal from './Modal'
 
-function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, time, interval, sendToDb}) {
+function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, time, interval, sendToDb, changeCurrentComponent}) {
   const [ img, setImg ] = useState()
   const [ mousePosition, setMousePosition ] = useState({x:0,y:0})
   const [ displayMagnify, setDisplayMagnify ] = useState(false)
@@ -20,6 +20,8 @@ function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, 
     } else {
       sendToDb({name, time})
     }
+
+    changeCurrentComponent('scoreboard')
   }
 
   const handleClick = (e) => {

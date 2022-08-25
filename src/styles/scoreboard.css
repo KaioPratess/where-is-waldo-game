@@ -17,6 +17,7 @@
   align-self: center;
   color: white;
   margin-top: 50px;
+  font-size: 2rem;
 }
 
 .scoreboard-chapters {
@@ -32,13 +33,16 @@
 .table {
   margin-top: 15px;
   width: 100%;
-  border: 2px solid white;
   border-collapse: collapse;
   color: white;
 }
 
 thead th:first-of-type {
   width: 80%;
+}
+
+th {
+  font-size: 1.15rem;
 }
 
 th, tr, td {

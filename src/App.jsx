@@ -23,6 +23,10 @@ function App() {
     setFoundCharacter(c)
   }
 
+  const changeCurrentComponent = (component) => {
+    setCurrentComponent(component)
+  }
+
   const count = () => {
       setSeconds(prevState => {
         if(prevState < 59) {
@@ -126,8 +130,8 @@ function App() {
       </header>
 
       {currentComponent === 'chapterSelect' &&  <ChapterSelect selectChapter={selectChapter}/>}
-      {currentComponent === 'game' &&  <Game currentChapter={currentChapter} positions={positions} changeFoundCharacter={changeFoundCharacter} foundCharacter={foundCharacter} time={{hours, minutes, seconds}} interval={intervalState} sendToDb={sendToDb}/>}
-      {currentComponent === 'scoreboard' &&  <Scoreboard currentChapter={currentChapter} getDb={getDb}/>}
+      {currentComponent === 'game' &&  <Game currentChapter={currentChapter} positions={positions} changeFoundCharacter={changeFoundCharacter} foundCharacter={foundCharacter} time={{hours, minutes, seconds}} interval={intervalState} sendToDb={sendToDb} changeCurrentComponent={changeCurrentComponent}/>}
+      {currentComponent === 'scoreboard' &&  <Scoreboard currentChapter={currentChapter} getDb={getDb} />}
    
       <footer className='footer'>
         <p>Made by KaioPratess</p>
