@@ -31,6 +31,9 @@ function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, 
       x: (mousePosition.x / rect.width).toFixed(2), 
       y: (mousePosition.y / rect.height).toFixed(2)
     })
+
+    console.log(`x: ${(mousePosition.x / rect.width).toFixed(2)}`)
+    console.log(`y: ${(mousePosition.y / rect.height).toFixed(2)}`)
   }
 
   useEffect(() => {
