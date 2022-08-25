@@ -1,4 +1,4 @@
-<h1>Where's Waldo?</h1>
+<h1><a href="https://kaiopratess.github.io/where-is-waldo-game/">Where's Waldo?</a></h1>
 
 <h2>What is this project about?</h2>
 <p>This is a web game based on the british series of children's puzzle books created by English illustrator Martin Handford.</p>
