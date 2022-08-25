@@ -16,7 +16,6 @@ function Scoreboard({currentChapter, getDb}) {
     
     setDocs([])
     documents.then(resp => {
-      console.log(resp)
       resp.docs.forEach(doc => {
         const name = doc._document.data.value.mapValue.fields.name.stringValue;
         const time = doc._document.data.value.mapValue.fields.time.mapValue.fields

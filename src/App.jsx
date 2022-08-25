@@ -94,7 +94,7 @@ function App() {
   }
 
   const sendToDb = async (data) => {
-    const docRef = await addDoc(collection(db, `chapters/${currentChapter.name.toLowerCase().replace(' ', '-')}/scoreboard`), data);
+    const docRef = await addDoc(collection(db, `chapters/${currentChapter.name.toLowerCase().replace(/ /g, '-')}/scoreboard`), data);
 
     console.log("Document written with ID: ", docRef.id);
   }
