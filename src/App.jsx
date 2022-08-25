@@ -52,7 +52,9 @@ function App() {
   const selectChapter = (name, img) => {
     setCurrentComponent('game')
     setCurrentChapter({name, img})
-    const documents = getDb(`chapters/${name.toLowerCase().replace(' ', '-')}/positions`);
+    const documents = getDb(`chapters/${name.toLowerCase().replace(/ /g, '-')}/positions`);
+    console.log(documents)
+    console.log(name.toLowerCase().replace(/ /g, '-'))
 
     documents.then(resp => {
         resp.docs.forEach(doc => {
@@ -67,7 +69,6 @@ function App() {
           })
         })
     })
-
     setIntervalState(setInterval(count, 1000))
   }
 

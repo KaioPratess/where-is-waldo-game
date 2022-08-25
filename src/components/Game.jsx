@@ -55,6 +55,7 @@ function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, 
 
   const isCharacter = (c) => {
     let isTrue;
+    console.log(positions[c])
     const minX = positions[c].rangeX[0].doubleValue
     const maxX = positions[c].rangeX[1].doubleValue
     const minY = positions[c].rangeY[0].doubleValue
