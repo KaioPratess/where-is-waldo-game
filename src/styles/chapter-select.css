@@ -11,18 +11,18 @@
   color: white;
 }
 
-.chapters {
+.chapter-select .chapters {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px 40px;
 }
 
-.chapter-div {
+.chapter-select .chapter-div {
   cursor: pointer;
   display: block;
 }
 
-.chapter-div:hover {
+.chapter-select .chapter-div:hover {
   width: 102%;
   height: 102%;
 }

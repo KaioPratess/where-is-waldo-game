@@ -1,6 +1,7 @@
 @import './styles/chapter-select.css';
 @import './styles/game.css';
 @import './styles/modal.css';
+@import './styles/scoreboard.css';
 
 * {
   padding: 0;

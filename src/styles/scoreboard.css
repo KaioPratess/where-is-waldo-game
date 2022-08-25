@@ -1,0 +1,47 @@
+.scoreboard-container {
+  padding: 140px 45px 100px 45px;
+  background-color: #ff9756;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 25px;
+}
+
+.scoreboard-container h1 {
+  color: white;
+  font-size: 2.75rem;
+  align-self: center;
+}
+
+.scoreboard-container h2 {
+  align-self: center;
+  color: white;
+  margin-top: 50px;
+}
+
+.scoreboard-chapters {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  gap: 40px 10px;
+}
+
+.scoreboard-chapters .chapter-div {
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 15px;
+  width: 100%;
+  border: 2px solid white;
+  border-collapse: collapse;
+  color: white;
+}
+
+thead th:first-of-type {
+  width: 80%;
+}
+
+th, tr, td {
+  border: 2px solid white;
+  padding: 10px;
+}

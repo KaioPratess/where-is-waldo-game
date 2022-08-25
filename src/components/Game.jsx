@@ -19,8 +19,6 @@ function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, 
       alert('Fill in your Name!')
     } else {
       sendToDb({name, time})
-      console.log(name)
-      console.log(time)
     }
   }
 
@@ -119,7 +117,7 @@ function Game({currentChapter, positions, foundCharacter, changeFoundCharacter, 
         <div className='congrats-bg'>
           <div className='congrats'>
             <p>Congratulations!</p>
-            <p>You found all characters in {time[0]<10 && 0}{time[0]}:{time[1]<10 && 0}{time[1]}:{time[2]<10 && 0}{time[2]}!</p>
+            <p>You found all characters in {time.hours<10 && 0}{time.hours}:{time.minutes<10 && 0}{time.minutes}:{time.seconds<10 && 0}{time.seconds}!</p>
             <div>
               <label htmlFor="name">Tell us your name</label>
               <input type='text' id='name' name='name' maxLength={15} required/>

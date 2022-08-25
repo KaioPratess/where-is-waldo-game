@@ -108,7 +108,7 @@ function App() {
     <div className="app">
       <header className='header'>
         <img src={logo} alt="logo" className='logo' onClick={returnHome}/>
-        {currentComponent === 'chapterSelect' && <span>Scoreboard</span>}
+        {currentComponent === 'chapterSelect' && <span onClick={() => setCurrentComponent('scoreboard')}>Scoreboard</span>}
         {currentComponent === 'game' && <div className='char-div'>
                                           <div className="characters">
                                             <img src={char} alt="characters" />
@@ -127,7 +127,7 @@ function App() {
 
       {currentComponent === 'chapterSelect' &&  <ChapterSelect selectChapter={selectChapter}/>}
       {currentComponent === 'game' &&  <Game currentChapter={currentChapter} positions={positions} changeFoundCharacter={changeFoundCharacter} foundCharacter={foundCharacter} time={{hours, minutes, seconds}} interval={intervalState} sendToDb={sendToDb}/>}
-      {currentComponent === 'scoreboard' &&  <Scoreboard />}
+      {currentComponent === 'scoreboard' &&  <Scoreboard currentChapter={currentChapter} getDb={getDb}/>}
    
       <footer className='footer'>
         <p>Made by KaioPratess</p>
