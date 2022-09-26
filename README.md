@@ -64,7 +64,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ gh auth login --web
 
 #Fork this repository and clone your fork
-$ gh repo fork https:// --clone
+$ gh repo fork https://github.com/KaioPratess/where-is-waldo-game.git --clone
 
 # Install dependencies
 $ npm install
